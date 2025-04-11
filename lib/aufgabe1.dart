@@ -37,18 +37,19 @@ class _Aufgabe1State extends State<Aufgabe1> {
           children: [
             Text('This is how memes used to look like'),
             Text('15 years ago'),
-          ],
-        ),
+             ],
+            ),
         
-      ),
+           ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(4.0),
         child: NavigationBar(
           onDestinationSelected: (value) {
             setState(() {
             pageIndex = value;
-            });
-          },
+           }
+          );
+         },
           selectedIndex: pageIndex,
           destinations: [
         NavigationDestination(icon: Icon(Icons.pets), label: 'AD'),
@@ -59,7 +60,8 @@ class _Aufgabe1State extends State<Aufgabe1> {
         NavigationDestination(icon: Icon(Icons.space_dashboard_outlined), label: 'LOSS'),
         NavigationDestination(icon: Icon(Icons.psychology_outlined), label: 'PR'),
         NavigationDestination(icon: Icon(Icons.done_all), label: 'SK'),
-        ]),
+        ]
+       ),
       ),
       body: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -67,10 +69,10 @@ class _Aufgabe1State extends State<Aufgabe1> {
             mainAxisAlignment: MainAxisAlignment.center,
             children:[
               pages[pageIndex],
-      ]
-     ),
+     ]
     ),
-    );
-  }
+   ),
+  );
+ }
 }
 
